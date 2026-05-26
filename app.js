@@ -236,6 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isWeb = window.location.protocol.startsWith('http');
         const targetUrl = isWeb ? '/api/checkout' : 'http://localhost:5000/api/checkout';
 
+        let responseOk = false;
         try {
             const response = await fetch(targetUrl, {
                 method: 'POST',
@@ -249,11 +250,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 console.log("Lead request email successfully dispatched!");
+                responseOk = true;
             } else {
-                console.error("API response error:", await response.text());
+                const errText = await response.text();
+                console.error("API response error:", errText);
+                alert(`Lead Dispatch Error: ${errText}`);
             }
         } catch (err) {
             console.error("Failed to POST lead details:", err);
+            alert(`Connection Error: ${err.message}. If testing locally, make sure your local server is running by opening the folder and running 'node server.js'`);
         }
 
         // Delay briefly to allow standard animation feeling
@@ -261,9 +266,11 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = false;
             submitBtn.innerHTML = origText;
             
-            // Toggle screen to success
-            formView.classList.add('hidden');
-            successView.classList.remove('hidden');
+            if (responseOk) {
+                // Toggle screen to success
+                formView.classList.add('hidden');
+                successView.classList.remove('hidden');
+            }
         }, 1200);
     };
 

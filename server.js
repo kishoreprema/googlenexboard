@@ -31,9 +31,11 @@ app.post('/api/checkout', async (req, res) => {
 
     console.log(`[Local Lead] Name: ${name}, Email: ${email}`);
 
-    // Create Transporter using Gmail SMTP credentials
+    // Create Transporter using Gmail SMTP credentials explicitly with host, port and secure parameters
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
         auth: {
             user: 'kishoreprema2001@gmail.com',
             pass: 'wkrh mbwk rmam sqdq'
