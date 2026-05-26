@@ -1,0 +1,4 @@
+User-agent: *
+Allow: *
+
+Sitemap: https://googlenexboard.vercel.app/sitemap.xml
