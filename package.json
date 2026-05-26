@@ -1,0 +1,13 @@
+{
+  "name": "google-nexboard",
+  "version": "1.0.0",
+  "description": "NexBoard Product Tour Showcase and Sales Funnel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^8.0.1"
+  }
+}

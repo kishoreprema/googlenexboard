@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexBoard - Feature & UI Screenshot Tour</title>
+    <meta name="description" content="Explore original high-fidelity screenshots of NexBoard's visual project boards, timelines, and developer dashboards. Request setup information and monorepo files.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+
+    <!-- =========================================================================
+         HEADER
+         ========================================================================= -->
+    <header class="header">
+        <div class="container header-wrapper">
+            <a href="#" class="brand">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 2L2 9L16 16L30 9L16 2Z" fill="currentColor"/>
+                    <path d="M2 16L16 23L30 16L16 9L2 16Z" fill="currentColor" opacity="0.8"/>
+                </svg>
+                <span>NexBoard</span>
+            </a>
+            <div class="header-meta">
+                <i class="fa-solid fa-circle" style="color: var(--accent-green); font-size: 8px; margin-right: 6px;"></i> Vercel-Ready Release v1.0.0
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+         INTRO
+         ========================================================================= -->
+    <section class="intro">
+        <div class="container">
+            <span class="intro-badge">Product Visual Walkthrough</span>
+            <h1>High-Fidelity Feature & UI Tour</h1>
+            <p>
+                Browse authentic, premium screenshots of your active workspaces, drag-and-drop boards, and team timelines. 
+                Discover how NexBoard combines high-performance developer tools with rich workspace analytics.
+            </p>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         INTERACTIVE SHOWCASE SLIDES & BULLETS
+         ========================================================================= -->
+    <main class="container">
+        <!-- Interactive Toggles (Tabs) -->
+        <div class="showcase-tabs">
+            <button class="tab-btn active" data-target="dashboard">
+                <div class="tab-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <div class="tab-info">
+                    <h3>01. Team Dashboard</h3>
+                    <p>Workspace overview & stats</p>
+                </div>
+            </button>
+
+            <button class="tab-btn" data-target="kanban">
+                <div class="tab-icon">
+                    <i class="fa-solid fa-table-columns"></i>
+                </div>
+                <div class="tab-info">
+                    <h3>02. Kanban Columns</h3>
+                    <p>Card drag-and-drop workflow</p>
+                </div>
+            </button>
+
+            <button class="tab-btn" data-target="planner">
+                <div class="tab-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div class="tab-info">
+                    <h3>03. My Planner</h3>
+                    <p>Personal tasks & schedule</p>
+                </div>
+            </button>
+
+            <button class="tab-btn" data-target="analytics">
+                <div class="tab-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="tab-info">
+                    <h3>04. PM Analytics</h3>
+                    <p>Project reports & metrics</p>
+                </div>
+            </button>
+
+            <button class="tab-btn" data-target="admin">
+                <div class="tab-icon">
+                    <i class="fa-solid fa-user-gear"></i>
+                </div>
+                <div class="tab-info">
+                    <h3>05. Admin Control</h3>
+                    <p>User logs & project access</p>
+                </div>
+            </button>
+        </div>
+
+        <!-- Showcase Body (Screenshot & Detailed Bullet Points) -->
+        <div class="showcase-content-wrapper">
+            <!-- Left: Zoomable Screenshot -->
+            <div class="screenshot-container" id="screenshot-view">
+                <span class="screenshot-badge" id="screen-badge">
+                    <i class="fa-solid fa-eye"></i> Dashboard Screen (Original UI Mockup)
+                </span>
+                <img src="assets/dashboard.png" alt="NexBoard Dashboard UI Screenshot" id="screenshot-img">
+            </div>
+
+            <!-- Right: Feature Checkboxes / Bullet points of what this screen has -->
+            <div class="details-container">
+                <div class="details-header">
+                    <h2 id="details-title">Workspace Analytics Dashboard</h2>
+                    <p id="details-desc">Assess the health and speed of all project teams under a single consolidated control center.</p>
+                </div>
+
+                <div class="options-list" id="options-container">
+                    <!-- Dynamic details injected here by app.js -->
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================================================
+             GET MORE INFO CARD
+             ========================================================================= -->
+        <section class="purchase-card">
+            <div class="purchase-info">
+                <h2>Get More Information</h2>
+                <p>
+                    Have questions about self-hosting, database configuration, or custom deployment? 
+                    Get in touch with us to receive additional info, setup guides, and monorepo files.
+                </p>
+            </div>
+            <div class="purchase-action">
+                <button class="btn btn-primary" onclick="openCheckoutModal()">
+                    <i class="fa-solid fa-circle-info"></i> Get More Info
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================================
+         LICENSE REQUEST MODAL POPUP
+         ========================================================================= -->
+    <div class="modal-overlay" id="checkout-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Get More Info</h3>
+                <button class="close-modal-btn" onclick="closeCheckoutModal()">&times;</button>
+            </div>
+            
+            <div class="modal-body" id="form-view">
+                <div class="checkout-summary">
+                    <div class="summary-title">
+                        <h4>Request Technical Info</h4>
+                        <p>Self-hosted Monorepo &amp; Setup Guide</p>
+                    </div>
+                </div>
+
+                <form id="checkout-form" onsubmit="handleCheckoutSubmit(event)">
+                    <div class="form-group">
+                        <label for="c-name">Full Name</label>
+                        <input type="text" id="c-name" class="form-input" placeholder="e.g. John Doe" value="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-email">Email Address</label>
+                        <input type="email" id="c-email" class="form-input" placeholder="e.g. developer@company.com" value="customer@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-message">Message / Requirements</label>
+                        <textarea id="c-message" class="form-input" rows="4" placeholder="e.g. Interested in self-hosting with SQLite..." style="resize: none;" required>Hi, we are interested in evaluating the self-hosted NexBoard platform for our engineering team. Please share the monorepo bundle and setup guides.</textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+                        <i class="fa-solid fa-paper-plane"></i> Submit Request
+                    </button>
+                </form>
+            </div>
+
+            <!-- Success screen inside Modal -->
+            <div class="checkout-success hidden" id="success-view">
+                <div class="success-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h3>Request Submitted!</h3>
+                <p>
+                    Thank you for your interest in **NexBoard**! Your request has been registered. We will send setup guides and technical info to <strong id="success-email">customer@example.com</strong> shortly.
+                </p>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">
+                    Our team will reach out with details on the self-hosted monorepo.
+                </p>
+                <button class="btn btn-primary" onclick="closeCheckoutModal()" style="margin-top: 10px;">
+                    <i class="fa-solid fa-circle-check"></i> Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script imports -->
+    <script src="app.js?v=2"></script>
+</body>
+
+</html>
