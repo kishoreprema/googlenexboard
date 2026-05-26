@@ -22,5 +22,18 @@
       "src": "app.js",
       "use": "@vercel/static"
     }
+  ],
+  "routes": [
+    {
+      "src": "/api/checkout",
+      "dest": "api/checkout.js"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
