@@ -1,17 +1,26 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "routes": [
+  "builds": [
     {
-      "src": "/api/checkout",
-      "dest": "api/checkout.js"
+      "src": "api/checkout.js",
+      "use": "@vercel/node"
     },
     {
-      "handle": "filesystem"
+      "src": "assets/**",
+      "use": "@vercel/static"
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "style.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "app.js",
+      "use": "@vercel/static"
     }
   ]
 }
