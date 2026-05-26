@@ -10,122 +10,122 @@ document.addEventListener('DOMContentLoaded', () => {
     // -------------------------------------------------------------
     const screensData = {
         dashboard: {
-            title: "Workspace Analytics Dashboard",
-            desc: "Assess the health, progress, and speed of all project teams under a single consolidated control center.",
-            badge: '<i class="fa-solid fa-chart-pie"></i> Dashboard Screen (Original UI Mockup)',
+            title: "Executive Control Center",
+            desc: "A high-impact unified command center providing leaders with complete visibility into organizational health, team delivery speeds, and cross-functional performance.",
+            badge: '<i class="fa-solid fa-chart-pie"></i> Executive Control Center (Live Platform UI)',
             img: "assets/dashboard.png",
             options: [
                 {
-                    title: "Total Task Metrics & Progress",
-                    desc: "Live analytics counters tracking exact ratios of completed vs pending tasks in real-time."
+                    title: "Unified Velocity Analytics",
+                    desc: "Monitor real-time delivery ratios, active task counts, and velocity metrics to prevent scope creep."
                 },
                 {
-                    title: "Circular Completion Gauge",
-                    desc: "Interactive completion progress gauge displaying overall done rates computed automatically."
+                    title: "Automated Progress Baselines",
+                    desc: "Dynamic project health gauges calculate done-ratios and execution trends computed automatically."
                 },
                 {
-                    title: "Priority Workload Distribution",
-                    desc: "Doughnut and bar charts separating high, medium, and low priority tickets in visual layers."
+                    title: "Workload Alignment Heatmaps",
+                    desc: "Visualize priority distribution profiles to balance engineering resources and tackle bottlenecks."
                 },
                 {
-                    title: "Active Team Online Indicators",
-                    desc: "Monitor active team member presence (Available, Busy, Away) directly with colored status rings."
+                    title: "Real-time Collaboration Ring",
+                    desc: "Track active stakeholder presence and status signals to facilitate frictionless cross-team syncs."
                 }
             ]
         },
         kanban: {
-            title: "Developer Kanban Columns",
-            desc: "Organize, prioritize, and drag-and-drop tasks throughout custom developer lanes.",
-            badge: '<i class="fa-solid fa-table-columns"></i> Kanban Board Screen (Original UI Mockup)',
+            title: "Kanban Workflow Orchestration",
+            desc: "Drive continuous delivery and execution transparency across lanes custom-tailored for high-performing engineering cycles.",
+            badge: '<i class="fa-solid fa-table-columns"></i> Kanban Orchestration Board (Live Platform UI)',
             img: "assets/kanban.png",
             options: [
                 {
-                    title: "Custom Column State Transitions",
-                    desc: "Flow cards smoothly across multiple developer columns: To Do, In Progress, Review, and Done."
+                    title: "Advanced State Transitions",
+                    desc: "Transition work packages smoothly through customized quality gates, peer reviews, and deployment pipelines."
                 },
                 {
-                    title: "Member Avatars & Tag Badges",
-                    desc: "Visually stamp assignees, unique ticket key IDs, and priority tags directly on the card face."
+                    title: "Metadata Tag System",
+                    desc: "Identify priority, tracking codes, and team assignments at a single glance with smart badge layouts."
                 },
                 {
-                    title: "Integrated Ticket Chat threads",
-                    desc: "Engage in developer chat logs directly inside individual task threads to coordinate code merges."
+                    title: "Collaborative Thread Logs",
+                    desc: "Drive context-aware stakeholder alignment and asset sharing directly within active issue threads."
                 },
                 {
-                    title: "Interactive Descriptions & Checklists",
-                    desc: "Log detailed specs, check off itemized checklists, and drag-drop subtasks seamlessly."
+                    title: "Itemized Subtask Matrix",
+                    desc: "Deconstruct complex milestones into actionable checklist criteria with clear ownership mappings."
                 }
             ]
         },
         planner: {
-            title: "My Planner & Task Schedules",
-            desc: "Coordinate personal agendas, calendars, and timelines to manage workloads effectively.",
-            badge: '<i class="fa-solid fa-calendar-check"></i> My Planner Screen (Original UI Mockup)',
+            title: "Personal Workload Planner",
+            desc: "Empower contributors to self-schedule, map critical path timelines, and maintain focus on high-impact objectives.",
+            badge: '<i class="fa-solid fa-calendar-check"></i> My Planner & Calendar Tracks (Live Platform UI)',
             img: "assets/planner.png",
             options: [
                 {
-                    title: "Interactive FullCalendar Grid",
-                    desc: "Map tasks directly onto weekly/monthly calendar slots to visual schedules and track targets."
+                    title: "High-Fidelity Calendar Engine",
+                    desc: "Map individual deliverables directly onto standard calendar structures to schedule and meet deadlines."
                 },
                 {
-                    title: "Comprehensive Gantt timeline Tracks",
-                    desc: "Review chronological Gantt timeline paths displaying project scopes and milestones."
+                    title: "Chronological Gantt Tracks",
+                    desc: "Examine interactive timeline trajectories highlighting task dependencies and release targets."
                 },
                 {
-                    title: "Personal Planner Item Lists",
-                    desc: "Quickly review task checkoffs, due priorities, and targets custom-tailored for your user account."
+                    title: "Personal Task Dashboard",
+                    desc: "Keep individuals aligned with unified focus lists, personal due dates, and priority indicators."
                 },
                 {
-                    title: "Direct Date-Drag Controls",
-                    desc: "Drag the margins of Gantt chart columns to stretch or shorten due dates in real-time."
+                    title: "Adaptive Drag Scheduling",
+                    desc: "Instantly reschedule and stretch task scopes directly on visual Gantt tracks with auto-aligned target dates."
                 }
             ]
         },
         analytics: {
-            title: "PM Reports & Project Analytics",
-            desc: "Examine advanced project-wise timelines, overdue parameters, and team metrics.",
-            badge: '<i class="fa-solid fa-chart-line"></i> Analytics Screen (Original UI Mockup)',
+            title: "Operational Intelligence & Metrics",
+            desc: "Leverage predictive charts, delivery velocity trackers, and cross-project dashboards to make data-driven decisions.",
+            badge: '<i class="fa-solid fa-chart-line"></i> Operational Analytics Suite (Live Platform UI)',
             img: "assets/analytics.png",
             options: [
                 {
-                    title: "Horizontal Project-wise Completion",
-                    desc: "Compare the shipping rate of multiple project keys side-by-side in horizontal graphs."
+                    title: "Cross-Project Shipping Rates",
+                    desc: "Compare delivery speeds across key project workspaces side-by-side with clear visual performance graphs."
                 },
                 {
-                    title: "Overdue Velocity Traps",
-                    desc: "Assess critical bottlenecks with lists pointing to the projects accumulating overdue tickets."
+                    title: "SLA & Bottleneck Analysis",
+                    desc: "Identify high-risk delays and projects accumulating overdue scopes before they impact launch schedules."
                 },
                 {
-                    title: "Status Breakdown per Project",
-                    desc: "Review overall done percentages and progress ratios across separate projects."
+                    title: "Status Density Distribution",
+                    desc: "Review delivery ratios and task phase distributions to keep cross-functional pipelines flowing."
                 },
                 {
-                    title: "Members density counts",
-                    desc: "Track team counts allocated to specific workspaces to balance workloads correctly."
+                    title: "Resource Capacity Audits",
+                    desc: "Monitor team density mappings and project allocations to maximize engineering efficiency."
                 }
             ]
         },
         admin: {
-            title: "System & User Administration",
-            desc: "Manage user profiles, permissions, passwords, and project access directories.",
-            badge: '<i class="fa-solid fa-user-gear"></i> Admin Dashboard (Original UI Mockup)',
+            title: "Enterprise Governance & Administration",
+            desc: "Ensure organization-wide security, audit project accesses, and govern team profiles with strict enterprise compliance.",
+            badge: '<i class="fa-solid fa-user-gear"></i> System Administration Panel (Live Platform UI)',
             img: "assets/admin.png",
             options: [
                 {
-                    title: "Granular Role Management",
-                    desc: "Add new users, edit existing details, assign credentials, and set roles (Admin, PM, Employee)."
+                    title: "Role-Based Access Governance",
+                    desc: "Assign strict security profiles and roles (Administrator, Manager, Contributor) with granular directories."
                 },
                 {
-                    title: "Custom Project key Registration",
-                    desc: "Register new project scopes, assign prefix keys (e.g. WEB, IOS), and designate managers."
+                    title: "Namespace Project Scoping",
+                    desc: "Provision new project environments, set scope prefixes, and assign dedicated engineering leads."
                 },
                 {
-                    title: "Secure Project Access Allocations",
-                    desc: "Allocate and secure project directories so only assigned team members can view project boards."
+                    title: "Secure Context Boundaries",
+                    desc: "Isolate confidential workspaces so only authorized personnel can access sensitive intellectual properties."
                 },
                 {
-                    title: "Safe Admin Lockout Protection",
-                    desc: "Hardcoded safety parameters preventing accidental deletion or lockout of default system admins."
+                    title: "Admin Safety Guardrails",
+                    desc: "Hardcoded core safety rules preventing configuration lockouts, human errors, or critical setting deletions."
                 }
             ]
         }
